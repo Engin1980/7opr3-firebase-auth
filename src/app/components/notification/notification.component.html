@@ -1,0 +1,7 @@
+<div *ngIf="(messages ) as nms">
+  <div *ngFor="let nm of nms">
+  <div class="alert alert-{{getLevelString(nm.level)}} my-2" onclick="this.remove()">
+    {{nm.message}}
+  </div>
+  </div>
+</div>

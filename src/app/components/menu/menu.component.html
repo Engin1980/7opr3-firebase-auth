@@ -1,0 +1,18 @@
+<div class="navbar navbar-light bg-light justify-content-between">
+  <div>
+    <div *ngIf="getLoggedUser() != null">
+      <a  class="mx-4" routerLink="list">Users (list)</a>
+    </div>
+  </div>
+  <div>
+    <div *ngIf="getLoggedUser() == null">
+      <a class="mx-4"  routerLink="register">Register</a>
+      <a class="mx-4" routerLink="login">Log In</a>
+    </div>
+    <div *ngIf="getLoggedUser()">
+      {{getLoggedUser().user.email}}
+      <button type="button" class="btn btn-sm btn-outline-primary">Log out</button>
+    </div>
+
+  </div>
+</div>
